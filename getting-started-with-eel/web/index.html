@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Aishu's Magic-Music</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+    <section class="wellcome_area clearfix" id="home">
+        <div class="container h-100">
+<!--            navbar code starts -->
+                    <button class="button" id="lgt">Light</button>
+        <div class="container1">
+            <div class="user-prof">
+          <button class="show">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="portf">
+            <div class="img"></div>
+            <center><h6 class="user-name" >Aish Grace</h6></center>
+            <main class="happy" >
+                <p class="happy-text" >Happy&nbsp;Client</p>
+
+                <img class="happy-img" src="https://cdn-icons-png.flaticon.com/512/3176/3176367.png">
+            </main>
+          </div>
+          </div>
+          <ul class="menu">
+            <li ><img src="home.png" style="width:33px; margin-top:-8px;  "><a href="#">Home</a></li>
+            <li ><img src="search.png" style="width:33px; margin-top:-8px; "><a href="#">Search</a></li>
+            <li ><img src="https://cdn-icons-png.flaticon.com/512/907/907786.png" style="width:33px; margin-top:-8px; "><a href="#">Your Library</a></li>
+            <li ><img src="download.png" style="width:33px; margin-top:-8px; "><a href="#">Download Songs</a></li>
+            <li ><img src="spotify.png" style="width:29px; margin-top:-8px; "><a href="#">Listen via Spotify</a></li>
+          </ul>
+        </div>
+<!--            navbar code ends-->
+            <label class="switch">
+<!--                <i class="far fa-sun sun"></i>-->
+                <img src="https://cdn-icons-png.flaticon.com/512/5257/5257712.png" class="sun" style="height:27px;">
+
+                <input type="checkbox" id="togBtn" onclick="validate()">
+                <div class="slider round"></div>
+<!--                <i class="fas fa-moon moon"></i>-->
+                <img src="https://cdn-icons-png.flaticon.com/512/4643/4643543.png" class="moon" id="moon" style="height:27px;">
+
+            </label>
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md">
+                    <div class="wellcome-heading">
+                        <h2>
+                            Magic
+                            <img id="headphone" src="music.png" style="height:87px;width:87px;">
+                            Music</h2>
+                        <h3><img src="https://cdn-icons-png.flaticon.com/512/432/432492.png"></h3>
+                        <p>
+                            Turn any kind of mood into Bliss
+                            <img src="https://cdn-icons-png.flaticon.com/512/1504/1504165.png" style="height:33px;width:33px;">
+                        </p>
+                    </div>
+                    <div class="get-start-area">
+                        <form class="form-inline">
+<!--                            <input type="text" id="data" class="form-control email" placeholder="Enter text">-->
+<!--                            <input type="button" id="repeat" class="submit" value="▶ Shower" onclick="generateQRCode(7)">-->
+                            <button id="shuffle1" class="shuffle pop" type="button" onclick="generateQRCode(7)"></button>
+
+                            <button id="prev" class="shuffle pop" type="button" onclick="generateQRCode(9)"></button>
+
+<!--                            <input type="button" id="spl" class="submit" value="▶ Play" onclick="generateQRCode(2)">-->
+                            <button id="spl" class="play pop" type="button" onclick="generateQRCode(2)"></button>
+<!--                            <input type="button" class="submit" value=">> Skip" onclick="generateQRCode(3)">-->
+                            <button id="shuffle" class="shuffle pop" type="button" onclick="generateQRCode(3)"></button>
+                            <button id="loop" class="shuffle pop" type="button" onclick="generateQRCode(0)"></button>
+                            <div class="next-song">
+                                <h3>Up Next</h3>
+                                <output id="next-name"></output>
+                            </div>
+                            <div class="sliderContainer">
+                                <img src="https://cdn-icons-png.flaticon.com/512/945/945174.png" id="vol">
+                                 <input type="range" value="15" min="0" max="100" id="slider" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                                 <span id='output' >15</span>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="welcome-thumb ">
+            <img id="qr" class="headshot headshot-1" src="img/bg-img/play.jpg" width="50%">
+            <output id="song-name"></output>
+        </div>
+<!--        <iframe src="https://open.spotify.com/embed/playlist/0PedzRv5oaVHXOXJzhA01t" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>-->
+        <h3 class="cred">With
+            <img src="https://cdn-icons-png.flaticon.com/512/1029/1029183.png" id="heart"><span class="me"><strong>Aish</strong></span></h3>
+    </section>
+</body>
+</html>
