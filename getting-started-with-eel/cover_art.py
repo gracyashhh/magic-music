@@ -17,7 +17,7 @@ from random import randint
 import threading
 import os
 from dotenv import load_dotenv
-
+load_dotenv()
 cc=0
 def get_rid():
     global headers,cc
