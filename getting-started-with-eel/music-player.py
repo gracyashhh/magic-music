@@ -69,9 +69,15 @@ def generate_qr(data):
     #     print('calling pause babygirl')
     #     pause(check)
     #     check+=1
+    # elif data==2:
+    #     print('calling pause babygirl')
+    #     if mixer.music.get_busy() and not mixer.music.get_pos() == -1:
+    #         pause(0)  # force pause
+    #     else:
+    #         pause(1)  # force play
     elif data==2:
         print('calling pause babygirl')
-        if mixer.music.get_busy() and not mixer.music.get_pos() == -1:
+        if pausev:
             pause(0)  # force pause
         else:
             pause(1)  # force play
@@ -295,6 +301,23 @@ def play(skip=False):
 
                     # mixer.music.set_volume(0.5)
 
+# def pause(check):
+#     ensure_mixer()
+#     print(check,'so')
+#     global start,first,pausev,fine
+#     if check%2==0:
+#         mixer.music.pause()
+#         start=True
+#         pausev=False
+#         first=False
+#         print('pausing')
+#     else:
+#         mixer.music.unpause()
+#         start=False
+#         first=True
+#         pausev=True
+#         fine = False
+#         print('time to play')
 def pause(check):
     ensure_mixer()
     print(check,'so')
@@ -312,7 +335,6 @@ def pause(check):
         pausev=True
         fine = False
         print('time to play')
-
 def stop():
     mixer.music.stop()
 print(start)
