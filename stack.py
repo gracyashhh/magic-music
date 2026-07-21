@@ -2,13 +2,15 @@ import requests
 import base64
 import json
 import os
+from dotenv import load_dotenv
+load_dotenv()
 import urllib.request
 #######VERY IMPORTANT TO CODE TO GET PAST THE *EVERY 1 HOUR EXPIRING ACCESS TOKEN*####
 url = "https://accounts.spotify.com/api/token"
 headers = {}
 data = {}
-client_id="bf28268c9a924e3cb715750fd3e78b3a"
-client_secret="80b707862eae4567ae6afb38d34b4926"
+client_id=os.getenv('client_id')
+client_secret=os.getenv('client_secret')
 redirect_uri="https://www.google.co.in/"
 message = f"{client_id}:{client_secret}"
 messageBytes = message.encode('ascii')

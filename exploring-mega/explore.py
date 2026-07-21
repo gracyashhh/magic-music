@@ -1,8 +1,11 @@
 from mega import Mega
 import json
+import os
+from dotenv import load_dotenv
+load_dotenv()
 mega = Mega()
-email='aishwaryam.campk12@gmail.com'
-password='testapp123'
+email=os.getenv('mega_email')
+password=os.getenv('mega_password')
 # email=""
 # password=""
 m = mega.login(email, password)

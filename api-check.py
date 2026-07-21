@@ -9,9 +9,11 @@
 #     print(idx, track['name'])
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-
-spotify = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="bf28268c9a924e3cb715750fd3e78b3a",
-                                               client_secret="80b707862eae4567ae6afb38d34b4926",
+import os
+from dotenv import load_dotenv
+load_dotenv()
+spotify = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id= os.getenv('client_id'),
+                                               client_secret=os.getenv('client_id'),
                                                redirect_uri="https://www.google.co.in/",
                                                scope="user-library-read"))
 
@@ -50,11 +52,11 @@ URL = "https://api.spotify.com/v1/search?q=Muse&type=artist"
 
 
 # sending get request and saving the response as response object
-# r = requests.get(url = URL,params="Authorization: Bearer BQBXypkqtS-B9B1o2fMMmondVs8xc503xmBxdjKoaPw-RlazFjcGZ2TzDnFm-P3eVcS4ZBRKb9H-PXlGFap8W0c5wuXFg72-IV2Gr4XRSJndkBmOdMlWZg7bHZyFiHJF2nJL_5Q421TPpt3oplujlZq1aAfwDM9C0hgclclkMaeWqyir")
+# r = requests.get(url = URL,params="Authorization: Bearer ")
 
 ### getting URI using artist names!!
 
-access_token='BQDNJVKgt6ReMEDUjICoDq7-cKsF9H03kMLYpENBF-2Rce9VYjGZEPXYf84xRvj_SyaAuV9kEFkS3NXMkn8EUn1esj-fC5XcBiJadl4G4cmUO_ey51hHkjh23Etw-S3cfFxHFMp0WYFENOXsAirJUjlrx8DRQ7b1P5k_AQsOoanJ9cUPrf79DfLdOO7vQJJi9eZTWqvHqHXTlQ'
+access_token=''
 artist_name='gv prakash'
 artist_info = requests.get(
     'https://api.spotify.com/v1/search',
