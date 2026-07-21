@@ -1,6 +1,11 @@
 from lyrics_extractor import SongLyrics
-GCS_API_KEY = 'AIzaSyAx9GBhdR_fDyM_wYzgYPGAQ-Brctn8c9c'
-GCS_ENGINE_ID ='2d67307dfe87c6058'
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+GCS_API_KEY = os.getenv('GCS_API_KEY')
+GCS_ENGINE_ID = os.getenv('GCS_ENGINE_ID')
 # works for hindi and english and some tamil songs
 extract_lyrics = SongLyrics(GCS_API_KEY, GCS_ENGINE_ID)
 data = extract_lyrics.get_lyrics("veyyon silli")
