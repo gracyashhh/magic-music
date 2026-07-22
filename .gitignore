@@ -7,3 +7,12 @@ dist/
 build/
 app/MagicMusicSongs/
 release/
+# macOS files
+.DS_Store
+
+# macOS app icons
+*.iconset
+
+# Release files
+*.dmg
+*.zip
