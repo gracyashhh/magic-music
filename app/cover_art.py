@@ -17,7 +17,16 @@ from random import randint
 import threading
 import os
 from dotenv import load_dotenv
-load_dotenv()
+
+if getattr(sys, "frozen", False):
+    env_path = os.path.join(sys._MEIPASS, ".env")
+else:
+    env_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        ".env"
+    )
+
+load_dotenv(env_path)
 cc=0
 def get_rid():
     global headers,cc
@@ -40,8 +49,13 @@ def get_rid():
     r = requests.post(url, headers=headers, data=data)
     print("Status:", r.status_code)
     print("Response:", r.text)
-    token = r.json()['access_token']
+    response = r.json()
 
+    if 'access_token' not in response:
+        print("Spotify authentication failed:", response)
+        return
+    # token = r.json()['access_token']
+    token = response['access_token']
     headers = {
         "Authorization": "Bearer " + token
     }
