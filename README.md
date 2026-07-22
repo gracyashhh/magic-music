@@ -1,10 +1,16 @@
 # 🎵 Magic Music
 
+![Python](https://img.shields.io/badge/Python-3.14-blue)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS-success)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 A fast, lightweight, offline desktop music player built with **Python** and **Eel**.
 
-Magic Music started as a personal project to learn Python and desktop application development. Over time it has grown into a feature-rich local music player with automatic album artwork, playlists, shuffle, repeat, and much more.
+Magic Music started as a personal project to learn Python and desktop application development. It has gradually evolved into a cross-platform offline music player focused on simplicity, speed and an ad-free experience.
 
 > **Mission:** Create a beautiful, completely free desktop music player that anyone can use without ads or subscriptions.
+
+Designed to run on both **Windows** and **macOS** using the same codebase.
 
 ---
 
@@ -12,7 +18,8 @@ Magic Music started as a personal project to learn Python and desktop applicatio
 
 - 🎵 Play local MP3 files
 - 🖼️ Automatically fetch album artwork from Spotify
-- ⏯️ Play / Pause / Next / Previous
+- ⏯️ Play / Pause
+- ⏭️ Next / Previous
 - 🔀 Shuffle mode
 - 🔁 Repeat mode
 - 🔊 Volume control
@@ -22,9 +29,17 @@ Magic Music started as a personal project to learn Python and desktop applicatio
 
 ---
 
+# 🎬 Demo
+
+**Coming soon**
+
+*A short demo GIF will be added after the first stable release.*
+
+---
+
 # 📷 Screenshots
 
-*Coming soon*
+**Coming soon**
 
 ---
 
@@ -59,6 +74,8 @@ magic-music/
 ├── requirements.txt
 └── README.md
 ```
+
+> **Note:** The project folder will be renamed in a future cleanup update.
 
 ---
 
@@ -107,7 +124,7 @@ CLIENT_SECRET=your_spotify_client_secret
 Run the application
 
 ```bash
-python getting-started-with-eel/music-player.py
+python app/music-player.py
 ```
 
 ---
@@ -121,7 +138,7 @@ getting-started-with-eel/
 └── MagicMusicSongs/
 ```
 
-The application automatically scans and loads all supported audio files from this folder.
+The application automatically scans and loads all supported audio files inside this folder.
 
 ---
 
@@ -147,7 +164,7 @@ Current development focuses on:
 - ☁️ Cloud music support
 - 📱 Flutter mobile companion app
 
-If you have an idea or find a bug, feel free to open an Issue.
+If you discover a bug or have an idea, feel free to open an Issue.
 
 ---
 
@@ -162,8 +179,6 @@ If you have an idea or find a bug, feel free to open an Issue.
 - [ ] Windows executable (.exe)
 - [ ] macOS application (.dmg)
 - [ ] First GitHub Release
-
----
 
 ## 🚀 Version 1.1
 
@@ -200,7 +215,7 @@ Feel free to open an Issue or submit a Pull Request.
 
 # 📄 License
 
-MIT License
+MIT License.
 
 ---
 

@@ -8,7 +8,7 @@ from random import randint
 # STILL FACING SAME , FIND A WAY ASAP!!
 # 'tracks' ugh {'error': {'status': 401, 'message': 'The access token expired'}}
 # Traceback (most recent call last):
-#   File "F:\Projects-of-all-time\Music-player\getting-started-with-eel\cover_art.py", line 139, in get_cover_art
+#   File "F:\Projects-of-all-time\Music-player\app\cover_art.py", line 139, in get_cover_art
 #     uri_p = data["tracks"]["items"][0]["album"]["images"][0]["url"]
 # KeyError: 'tracks'
 #  whatever

@@ -5,5 +5,5 @@ __pycache__/
 *.log
 dist/
 build/
-getting-started-with-eel/MagicMusicSongs/
+app/MagicMusicSongs/
 music-player.spec
