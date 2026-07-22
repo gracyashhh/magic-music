@@ -11,7 +11,9 @@ from threading import Event, Thread
 from time import sleep
 curr=''
 fine = True
-eel.init('web')
+# eel.init('web')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+eel.init(os.path.join(BASE_DIR, "web"))
 pausev=True
 first=True
 start = False
