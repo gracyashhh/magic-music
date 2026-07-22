@@ -2,7 +2,7 @@
 
 A fast, lightweight, offline desktop music player built with **Python** and **Eel**.
 
-Magic Music started as a personal project to learn Python and desktop app development. Over time it has grown into a feature-rich local music player with automatic album artwork, playlists, shuffle, repeat, and much more.
+Magic Music started as a personal project to learn Python and desktop application development. Over time it has grown into a feature-rich local music player with automatic album artwork, playlists, shuffle, repeat, and much more.
 
 > **Mission:** Create a beautiful, completely free desktop music player that anyone can use without ads or subscriptions.
 
@@ -46,7 +46,7 @@ Magic Music started as a personal project to learn Python and desktop app develo
 # 📁 Project Structure
 
 ```text
-Magic Music/
+magic-music/
 │
 ├── getting-started-with-eel/
 │   ├── music-player.py
@@ -55,6 +55,7 @@ Magic Music/
 │   └── MagicMusicSongs/
 │
 ├── .env
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
@@ -117,10 +118,10 @@ Copy your MP3 files into
 
 ```text
 getting-started-with-eel/
-    MagicMusicSongs/
+└── MagicMusicSongs/
 ```
 
-The application automatically loads every supported song inside this folder.
+The application automatically scans and loads all supported audio files from this folder.
 
 ---
 
@@ -132,13 +133,31 @@ The application automatically loads every supported song inside this folder.
 
 ---
 
+# 📝 Development
+
+Magic Music is actively being developed.
+
+Feature requests, improvements and bug reports are tracked using **GitHub Issues**.
+
+Current development focuses on:
+
+- 🎵 Improving the desktop player
+- 🖥️ Windows (.exe) packaging
+- 🍎 macOS (.dmg) packaging
+- ☁️ Cloud music support
+- 📱 Flutter mobile companion app
+
+If you have an idea or find a bug, feel free to open an Issue.
+
+---
+
 # 🗺️ Roadmap
 
-## Version 1.0
+## 🎯 Version 1.0
 
 - [ ] Handle empty music folder gracefully
 - [ ] Better error messages
-- [ ] Improve loading speed
+- [ ] Improve loading performance
 - [ ] Better Spotify search matching
 - [ ] Windows executable (.exe)
 - [ ] macOS application (.dmg)
@@ -146,12 +165,12 @@ The application automatically loads every supported song inside this folder.
 
 ---
 
-## Version 1.1
+## 🚀 Version 1.1
 
 - [ ] Playlist support
 - [ ] Drag & Drop songs
 - [ ] Keyboard shortcuts
-- [ ] Themes
+- [ ] Theme support
 - [ ] Recently Played
 
 ---
@@ -159,24 +178,23 @@ The application automatically loads every supported song inside this folder.
 # 💡 Future Ideas
 
 - ☁️ Cloud music library
-- 📱 Flutter mobile app
-- 🔄 Cross-device sync
-- ❤️ Favorites
 - 📥 Built-in song downloader
+- ❤️ Favorites
 - 🎤 Lyrics support
 - 🎚️ Equalizer
-- 🎨 Theme store
 - 🌙 Dark / Light mode
 - 🔍 Instant search
 - 📊 Listening statistics
+- 📱 Flutter mobile application
+- 🔄 Cross-device sync
 
 ---
 
 # 🤝 Contributing
 
-Contributions, ideas and bug reports are always welcome.
+Contributions, ideas and bug reports are welcome.
 
-Feel free to open an Issue if you discover a bug or have an idea for a new feature.
+Feel free to open an Issue or submit a Pull Request.
 
 ---
 
