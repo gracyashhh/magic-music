@@ -147,19 +147,39 @@ def generate_qr(data):
 # Path(music_file).mkdir(parents=True, exist_ok=True)
 import sys
 from pathlib import Path
+import platform
 
-if getattr(sys, 'frozen', False):
-    # Running as a packaged .exe/.app
-    app_dir = Path(sys.executable).parent
-else:
-    # Running as a normal .py script
-    app_dir = Path(__file__).parent
+def get_app_dir():
+    if getattr(sys, 'frozen', False):
 
-music_file = str(app_dir / "MagicMusicSongs")
-Path(music_file).mkdir(parents=True, exist_ok=True)
+        if platform.system() == "Darwin":
+            # macOS:
+            # MagicMusic.app/Contents/MacOS/MagicMusic
+            executable = Path(sys.executable).resolve()
+
+            # Go to folder containing MagicMusic.app
+            return executable.parents[2].parent
+
+        else:
+            # Windows:
+            # MagicMusic/MagicMusic.exe
+            return Path(sys.executable).resolve().parent
+
+    else:
+        # Running normally from Python
+        return Path(__file__).parent
+
+
+app_dir = get_app_dir()
+
+music_file = app_dir / "MagicMusicSongs"
+music_file.mkdir(parents=True, exist_ok=True)
+
+fileDir = str(music_file)
 # music_file="D:\Aishu's Happiness\My Music List"
 # music_file="D:\debug-videos"
-fileDir = music_file
+# fileDir = music_file
+fileDir = str(music_file)
 fileExt = r".mp3"
 
 looop=0
@@ -248,7 +268,13 @@ def play(skip=False):
 
                     passthro = a.get_length()
                 except:
-                    diamond = convert(os.path.join(music_file, gem))
+                    print("MP3 failed:", e)
+
+                    try:
+                        diamond = convert(os.path.join(music_file, gem))
+                    except Exception as e:
+                        print("Conversion failed:", e)
+                        return
                     mixer.music.load(diamond)
                     a = mixer.Sound(diamond)
                     curr = diamond
